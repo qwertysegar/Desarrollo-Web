@@ -1,0 +1,26 @@
+/* Selector de etiqueta */
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+padding: 20px;
+}
+
+
+/* Selector de etiqueta */
+h1 {
+color: #333333;
+}
+
+
+/* Selector de clase */
+.texto-destacado {
+font-size: 16px;
+line-height: 1.5;
+}
+
+
+/* Selector de ID */
+#foto-principal {
+width: 150px;
+border-radius: 50%;
+}
