@@ -1,0 +1,78 @@
+/* =============================
+.form-registro textarea:focus {
+outline: 2px solid var(--color-secundario);
+}
+
+
+fieldset {
+margin-top: 15px;
+padding: 10px;
+}
+
+
+/* =============================
+PARTICIPANTES
+============================= */
+.participante {
+background-color: white;
+padding: 15px;
+margin-bottom: 10px;
+border-left: 6px solid;
+transition: background-color 0.3s;
+}
+
+
+.participante:hover {
+background-color: #f0f8ff;
+}
+
+
+.asistente {
+border-color: var(--color-asistente);
+}
+
+
+.ponente {
+border-color: var(--color-ponente);
+}
+
+
+.badge {
+display: inline-block;
+padding: 3px 8px;
+font-size: 12px;
+color: white;
+border-radius: 12px;
+}
+
+
+.asistente .badge {
+background-color: var(--color-asistente);
+}
+
+
+.ponente .badge {
+background-color: var(--color-ponente);
+}
+
+
+/* =============================
+TABS (SOLO VISUAL)
+============================= */
+.tabs {
+display: flex;
+gap: 10px;
+margin: 20px 0;
+}
+
+
+.tabs button {
+background-color: #dddddd;
+color: #333333;
+}
+
+
+.tabs button.activo {
+background-color: var(--color-secundario);
+color: white;
+}

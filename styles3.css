@@ -1,0 +1,78 @@
+/* =============================
+margin: auto;
+padding: 20px;
+}
+
+
+/* =============================
+HEADER Y NAVEGACIÓN
+============================= */
+.header {
+background-color: var(--color-primario);
+color: rgb(27, 193, 74);
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+
+.logo {
+margin: 0;
+font-size: 22px;
+}
+
+
+.nav a {
+color: rgb(21, 219, 156);
+margin-left: 15px;
+text-decoration: none;
+font-size: 14px;
+}
+
+
+.nav a.activo {
+border-bottom: 2px solid var(--color-secundario);
+}
+
+
+/* =============================
+BOTONES REUTILIZABLES
+============================= */
+a,
+button {
+transition: background-color 0.3s, color 0.3s;
+}
+
+
+button {
+background-color: var(--color-secundario);
+color: rgb(255, 255, 255);
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+border-radius: 4px;
+}
+
+
+button:hover {
+background-color: #3bbb21;
+}
+
+
+/* =============================
+RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+.nav {
+width: 100%;
+margin-top: 10px;
+}
+
+
+.nav a {
+display: inline-block;
+margin: 5px 10px 0 0;
+}
+}
