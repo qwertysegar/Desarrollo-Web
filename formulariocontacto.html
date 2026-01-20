@@ -1,0 +1,159 @@
+## Formulario de Contacto (HTML5)
+
+Este documento contiene la **estructura HTML obligatoria** del formulario de contacto para tu página de perfil personal.
+
+> 🔧 **Nota**: En este punto **solo trabajamos HTML**. El archivo `styles.css`, imágenes, estados visuales y animaciones se integrarán más adelante.
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="formulariocontacto.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Título del formulario -->
+    <header class="form-header">
+      <h1>Contacto Profesional</h1>
+      <p>Completa el siguiente formulario y me pondré en contacto contigo a la brevedad.</p>
+    </header>
+
+    <!-- Formulario de contacto -->
+    <form class="contact-form" action="#" method="post" novalidate>
+
+      <!-- Nombre completo -->
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresa tu nombre completo"
+          required
+        >
+        <small class="error-message">Por favor ingresa tu nombre completo.</small>
+      </div>
+
+      <!-- Correo electrónico -->
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="correo@ejemplo.com"
+          required
+        >
+        <small class="error-message">Ingresa un correo electrónico válido.</small>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          placeholder="Ej. 55 1234 5678"
+        >
+      </div>
+
+      <!-- Asunto / Motivo -->
+      <div class="form-group">
+        <label for="asunto">Asunto / Motivo</label>
+        <select id="asunto" name="asunto" required>
+          <option value="" selected disabled>Selecciona un asunto</option>
+          <option value="oferta">Oferta laboral</option>
+          <option value="colaboracion">Colaboración</option>
+          <option value="consulta">Consulta técnica</option>
+          <option value="otro">Otro</option>
+        </select>
+        <small class="error-message">Selecciona un asunto.</small>
+      </div>
+
+      <!-- Campo adicional para 'Otro' -->
+      <div class="form-group" id="otro-asunto" hidden>
+        <label for="otroTexto">Especifica el motivo</label>
+        <input
+          type="text"
+          id="otroTexto"
+          name="otroTexto"
+          placeholder="Describe el motivo"
+        >
+      </div>
+
+      <!-- Mensaje -->
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="5"
+          placeholder="Describe tu mensaje en detalle..."
+          required
+        ></textarea>
+        <small class="error-message">El mensaje no puede estar vacío.</small>
+      </div>
+
+      <!-- Aceptación de términos -->
+      <div class="form-group checkbox-group">
+        <input
+          type="checkbox"
+          id="terminos"
+          name="terminos"
+          required
+        >
+        <label for="terminos">Acepto la política de privacidad y términos de uso</label>
+        <small class="error-message">Debes aceptar los términos para continuar.</small>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="form-actions">
+        <button type="submit">Enviar Mensaje</button>
+        <button type="reset">Limpiar formulario</button>
+      </div>
+
+      <!--
+        🔹 Espacio reservado para imágenes decorativas o íconos
+        Ejemplo futuro:
+        <img src="images/contacto.svg" alt="Ilustración de contacto">
+      -->
+
+    </form>
+
+  </div>
+
+  <!--
+    🔹 En una siguiente etapa se agregará JavaScript para:
+    - Mostrar / ocultar el campo "Otro"
+    - Mensajes de error personalizados
+    - Validaciones avanzadas
+  -->
+
+</body>
+</html>
+```
+
+---
+
+### ✔️ Cumple con los objetivos solicitados
+
+* Estructura semántica clara
+* Validación HTML5 (`required`, `type=email`, `type=tel`)
+* Preparado para diseño responsive
+* Preparado para estados visuales y accesibilidad
+* Escalable para mejoras profesionales
+
+Cuando estés listo, pasamos a:
+👉 **CSS (maquetación, responsive y estados visuales)**
+👉 **Accesibilidad avanzada**
+👉 **Animaciones y mejoras UX**

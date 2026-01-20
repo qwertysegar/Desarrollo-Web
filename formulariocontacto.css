@@ -1,0 +1,195 @@
+/* =====================================================
+   formulariocontacto.css
+   Estilos del Formulario de Contacto
+   Paleta reutilizada del Sistema de Eventos
+   ===================================================== */
+
+/* ---------------- VARIABLES DE COLOR ---------------- */
+:root {
+    /* Colores base */
+    --color-primary: #2563eb;      /* Azul principal */
+    --color-secondary: #9333ea;    /* Morado */
+    --color-accent: #22c55e;       /* Verde */
+
+    /* Fondos */
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-muted: #e5e7eb;
+
+    /* Texto */
+    --color-text: #1f2933;
+    --color-text-light: #6b7280;
+
+    /* Estados */
+    --color-success: #16a34a;
+    --color-error: #dc2626;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ---------------- RESET BÁSICO ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- SELECTORES DE ETIQUETA ---------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--color-text-light);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-muted);
+    font-size: 0.95rem;
+}
+
+button {
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* ---------------- CONTENEDOR ---------------- */
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ---------------- HEADER ---------------- */
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ---------------- GRUPOS DE FORMULARIO ---------------- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+/* Selector de ID */
+#otro-asunto {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* ---------------- CHECKBOX ---------------- */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#terminos {
+    width: auto;
+}
+
+/* ---------------- BOTONES ---------------- */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-actions button[type="submit"] {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+}
+
+.form-actions button[type="reset"] {
+    background-color: var(--color-muted);
+    color: var(--color-text);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+}
+
+/* ---------------- PSEUDOCLASES ---------------- */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: var(--color-error);
+}
+
+input:valid,
+textarea:valid,
+select:valid {
+    border-color: var(--color-success);
+}
+
+/* ---------------- PSEUDOELEMENTOS ---------------- */
+::placeholder {
+    color: var(--color-text-light);
+    opacity: 0.8;
+}
+
+.form-group label::after {
+    content: " *";
+    color: var(--color-error);
+}
+
+/* ---------------- MENSAJES DE ERROR ---------------- */
+.error-message {
+    font-size: 0.8rem;
+    color: var(--color-error);
+    margin-top: 0.2rem;
+    display: none; /* Se activará con JS más adelante */
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 600px) {
+    .container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
