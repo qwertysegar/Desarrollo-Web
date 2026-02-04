@@ -1,0 +1,265 @@
+/* =====================================================
+   eventos.css
+   Estilos específicos para:
+   - Página principal de eventos (index3.html)
+   - Visualización de participantes (participantes.html)
+   Tema: Naranja + escala de grises (elegante)
+   ===================================================== */
+
+/* ---------------- VARIABLES LOCALES (EVENTOS) ---------------- */
+:root {
+    --event-accent: #f97316;       /* Naranja elegante */
+    --event-dark: #111827;         /* Gris muy oscuro */
+    --event-gray: #6b7280;         /* Gris medio */
+    --event-light: #f3f4f6;        /* Gris claro */
+}
+
+/* =====================================================
+   INDEX – LISTADO DE EVENTOS
+   ===================================================== */
+
+/* Filtros y búsqueda */
+.filters {
+    background-color: var(--event-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.filters h2 {
+    margin-bottom: 1rem;
+    color: var(--event-dark);
+}
+
+.filters-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.filters-form input,
+.filters-form select {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.filters-form input:focus,
+.filters-form select:focus {
+    outline: none;
+    border-color: var(--event-accent);
+}
+
+/* ---------------- GRID DE EVENTOS ---------------- */
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    position: relative;
+    border-top: 5px solid var(--event-accent);
+}
+
+.event-card h3 {
+    margin: 0.8rem 0;
+    color: var(--event-dark);
+}
+
+.event-card .date,
+.event-card .location {
+    font-size: 0.85rem;
+    color: var(--event-gray);
+}
+
+.event-card .description {
+    margin: 1rem 0;
+    color: var(--color-text-light);
+}
+
+.event-card .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Categoría visual */
+.category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--event-accent);
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+/* Acciones */
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.actions .btn.primary {
+    background-color: var(--event-accent);
+}
+
+.actions .btn.primary:hover {
+    background-color: #ea580c;
+}
+
+/* Hover destacado */
+.event-card:hover {
+    border-top-color: #ea580c;
+}
+
+/* =====================================================
+   PARTICIPANTES – TABS Y TARJETAS
+   ===================================================== */
+
+/* Información del evento */
+.event-info {
+    background: linear-gradient(135deg, var(--event-dark), var(--event-gray));
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.event-info h2 {
+    margin-bottom: 0.5rem;
+}
+
+.event-info .event-meta {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.event-counters {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.counter .number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.counter .label {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+/* ---------------- TABS ---------------- */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tabs label {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background-color: var(--event-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input#tab-asistentes:checked ~ .tabs label[for="tab-asistentes"],
+input#tab-ponentes:checked ~ .tabs label[for="tab-ponentes"],
+input#tab-estadisticas:checked ~ .tabs label[for="tab-estadisticas"] {
+    background-color: var(--event-accent);
+    color: #fff;
+}
+
+/* Contenido de pestañas */
+.tab-content {
+    display: none;
+}
+
+input#tab-asistentes:checked ~ .asistentes,
+input#tab-ponentes:checked ~ .ponentes,
+input#tab-estadisticas:checked ~ .estadisticas {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ---------------- LISTAS Y TARJETAS ---------------- */
+.list-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.list-controls input,
+.list-controls select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-muted);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.participant-card.asistente {
+    border-left: 4px solid var(--color-asistente);
+}
+
+.participant-card.ponente {
+    border-left: 4px solid var(--color-ponente);
+}
+
+.participant-card.principal {
+    border-left: 6px solid var(--event-accent);
+}
+
+.participant-card .bio {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* Hover en participantes */
+.participant-card:hover {
+    background-color: var(--event-light);
+}
+
+/* =====================================================
+   ESTADÍSTICAS (PLACEHOLDERS VISUALES)
+   ===================================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--event-light);
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.chart.placeholder {
+    height: 120px;
+    border-radius: 8px;
+    background: repeating-linear-gradient(
+        45deg,
+        #e5e7eb,
+        #e5e7eb 10px,
+        #f3f4f6 10px,
+        #f3f4f6 20px
+    );
+    margin-top: 1rem;
+}
+

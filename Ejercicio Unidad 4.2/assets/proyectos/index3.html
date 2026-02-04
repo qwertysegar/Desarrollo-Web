@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso Nacional TDN | Inicio</title>
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="styles3.css">
+    <!-- Estilos específicos de eventos -->
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <div class="logo">
+        <!-- NOTA: coloca tu logo en /assets/img/logo.png -->
+        <img src="assets/img/LOGOCNTD2026.png" alt="Logo Congreso TDN" class="logo-img">
+        <h1>Congreso Nacional de Tecnología, Derecho y Negocios 2026</h1>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li class="active"><a href="index3.html">Inicio</a></li>
+            <li><a href="registro.html">Registrar Participante</a></li>
+            <li><a href="participantes.html">Ver Participantes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= CONTENIDO PRINCIPAL ================= -->
+<main class="container">
+
+    <!-- ======= FILTROS Y BÚSQUEDA ======= -->
+    <section class="filters">
+        <h2>Buscar y filtrar eventos</h2>
+
+        <form class="filters-form">
+            <input type="text" name="busqueda" placeholder="Buscar por nombre del evento">
+
+            <select name="categoria">
+                <option value="">Todas las categorías</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="derecho">Derecho</option>
+                <option value="negocios">Negocios</option>
+                <option value="educacion">Educación</option>
+            </select>
+
+            <input type="date" name="fecha">
+
+            <!-- NUEVO: filtro por hora -->
+            <input type="time" name="hora">
+
+            <select name="orden">
+                <option value="">Ordenar por</option>
+                <option value="recientes">Más recientes</option>
+                <option value="participantes">Más participantes</option>
+                <option value="az">Nombre A–Z</option>
+            </select>
+        </form>
+    </section>
+
+    <!-- ======= LISTADO DE EVENTOS ======= -->
+    <section class="events">
+
+        <!-- EVENTO 1 -->
+        <article class="event-card"
+                 id="evento-innovacion-digital"
+                 data-evento="innovacion-digital"
+                 data-categoria="tecnologia"
+                 data-fecha="2026-03-15"
+                 data-hora="09:00"
+                 style="background-image: url('assets/img/evento1.jpg');">
+
+            <!-- NOTA: la imagen se verá como fondo difuminado vía CSS -->
+
+            <span class="category tecnologia">Tecnología</span>
+            <h3>Innovación Digital</h3>
+            <p class="date">15 de marzo 2026 · 09:00 – 10:00</p>
+            <p class="location">INFOTEC CDMX</p>
+
+            <p class="description">
+                Evento enfocado en tendencias tecnológicas, inteligencia artificial y transformación digital.
+            </p>
+
+            <div class="stats">
+                <span>👥 12 participantes</span>
+                <span>🎤 1 ponente</span>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="btn">Ver detalles</a>
+                <a href="registro.html?evento=innovacion-digital" class="btn primary">
+                    Registrar participante
+                </a>
+                <a href="participantes.html?evento=innovacion-digital" class="btn">
+                    Ver participantes
+                </a>
+            </div>
+        </article>
+
+        <!-- EVENTO 2 -->
+        <article class="event-card"
+                 id="evento-derecho-empresarial"
+                 data-evento="derecho-empresarial"
+                 data-categoria="derecho"
+                 data-fecha="2026-03-15"
+                 data-hora="10:00"
+                 style="background-image: url('assets/img/evento2.jpg');">
+
+            <span class="category derecho">Derecho</span>
+            <h3>Derecho Empresarial y la Tecnología</h3>
+            <p class="date">15 de marzo 2026 · 10:00 – 11:00</p>
+            <p class="location">INFOTEC CDMX</p>
+
+            <p class="description">
+                Espacio de análisis sobre cumplimiento normativo, legaltech y gobierno corporativo.
+            </p>
+
+            <div class="stats">
+                <span>👥 8 participantes</span>
+                <span>🎤 2 ponentes</span>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="btn">Ver detalles</a>
+                <a href="registro.html?evento=derecho-empresarial" class="btn primary">
+                    Registrar participante
+                </a>
+                <a href="participantes.html?evento=derecho-empresarial" class="btn">
+                    Ver participantes
+                </a>
+            </div>
+        </article>
+
+        <!-- EVENTO 3 -->
+        <article class="event-card"
+                 id="evento-legaltech-negocios"
+                 data-evento="legaltech-negocios"
+                 data-categoria="negocios"
+                 data-fecha="2026-03-15"
+                 data-hora="11:00"
+                 style="background-image: url('assets/img/evento3.jpg');">
+
+            <span class="category negocios">Negocios</span>
+            <h3>Monetización del Legaltech</h3>
+            <p class="date">15 de marzo 2026 · 11:00 – 12:00</p>
+            <p class="location">INFOTEC CDMX</p>
+
+            <p class="description">
+                Análisis del potencial económico del legaltech y modelos de negocio emergentes.
+            </p>
+
+            <div class="stats">
+                <span>👥 15 participantes</span>
+                <span>🎤 1 ponente</span>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="btn">Ver detalles</a>
+                <a href="registro.html?evento=legaltech-negocios" class="btn primary">
+                    Registrar participante
+                </a>
+                <a href="participantes.html?evento=legaltech-negocios" class="btn">
+                    Ver participantes
+                </a>
+            </div>
+        </article>
+
+        <!-- EVENTO 4 -->
+        <article class="event-card"
+                 id="evento-educacion-legaltech"
+                 data-evento="educacion-legaltech"
+                 data-categoria="educacion"
+                 data-fecha="2026-03-15"
+                 data-hora="11:00"
+                 style="background-image: url('assets/img/evento4.jpg');">
+
+            <span class="category educacion">Educación</span>
+            <h3>Educación en Tecnología Legal</h3>
+            <p class="date">15 de marzo 2026 · 11:00 – 12:00</p>
+            <p class="location">INFOTEC CDMX · Aula 2</p>
+
+            <p class="description">
+                Metodologías educativas para introducir tecnología legal en Latinoamérica.
+            </p>
+
+            <div class="stats">
+                <span>👥 6 participantes</span>
+                <span>🎤 2 ponentes</span>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="btn">Ver detalles</a>
+                <a href="registro.html?evento=educacion-legaltech" class="btn primary">
+                    Registrar participante
+                </a>
+                <a href="participantes.html?evento=educacion-legaltech" class="btn">
+                    Ver participantes
+                </a>
+            </div>
+        </article>
+
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+    <p>© 2026 Sistema de Eventos MASG · Práctica de Maquetación HTML & CSS</p>
+</footer>
+
+</body>
+</html>
