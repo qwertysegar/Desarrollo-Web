@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso Nacional TDN | Registro</title>
+
+
+<!-- Estilos generales -->
+<link rel="stylesheet" href="styles3.css">
+<!-- Estilos específicos de registro -->
+<link rel="stylesheet" href="registro.css">
+
+
+</head>
+<body>
+
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <div class="logo">
+        <!-- NOTA: agrega aquí tu logo -->
+        <!-- <img src="assets/logo.png" alt="Congreso TDN"> -->
+        <h1>Congreso Nacional de Tecnología, Derecho y Negocios 2026</h1>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index3.html">Inicio</a></li>
+            <li class="active"><a href="registro.html">Registrar Participante</a></li>
+            <li><a href="participantes.html">Ver Participantes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= CONTENIDO PRINCIPAL ================= -->
+<main class="container">
+
+    <section class="form-section">
+        <h2>Registro de Participantes</h2>
+        <p class="form-description">Completa el formulario para registrarte en uno de nuestros eventos.</p>
+
+        <!-- ======= FORMULARIO ======= -->
+        <form class="registration-form">
+
+            <!-- EVENTO -->
+            <fieldset class="fieldset">
+                <legend>Evento</legend>
+                <label>Selecciona el evento <span class="required">*</span>
+                    <select name="evento" required>
+                        <option value="">-- Selecciona un evento --</option>
+                        <option value="innovacion">Innovación Digital</option>
+                        <option value="derecho">Derecho Empresarial y la tecnología</option>
+                        <option value="legaltech">Monetización del Legaltech</option>
+                        <option value="educacion">Educación generalizada sobre tecnología legal</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!-- TIPO DE PARTICIPANTE -->
+            <fieldset class="fieldset">
+                <legend>Tipo de Participante</legend>
+                <label><input type="radio" name="tipo" value="asistente" required> Asistente</label>
+                <label><input type="radio" name="tipo" value="ponente"> Ponente</label>
+            </fieldset>
+
+            <!-- DATOS GENERALES -->
+            <fieldset class="fieldset">
+                <legend>Datos Generales</legend>
+
+                <label>Nombre completo <span class="required">*</span>
+                    <input type="text" name="nombre" required>
+                </label>
+
+                <label>Email <span class="required">*</span>
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>Teléfono <span class="required">*</span>
+                    <input type="tel" name="telefono" required>
+                </label>
+
+                <label>País / Ciudad
+                    <input type="text" name="ubicacion">
+                </label>
+            </fieldset>
+
+            <!-- ASISTENTE -->
+            <fieldset class="fieldset asistente-fields" style="display:none">
+                <legend>Información para Asistentes</legend>
+
+                <label>Nivel de experiencia
+                    <select name="experiencia">
+                        <option value="">Selecciona</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Avanzado">Avanzado</option>
+                        <option value="Leyenda">Leyenda</option>
+                    </select>
+                </label>
+
+                <label>Áreas de interés
+                    <input type="text" name="intereses" placeholder="Tecnología, Derecho, Negocios">
+                </label>
+            </fieldset>
+
+            <!-- PONENTE -->
+            <fieldset class="fieldset ponente-fields" style="display:none">
+                <legend>Información para Ponentes</legend>
+
+                <label>Título de la ponencia <span class="required">*</span>
+                    <input type="text" name="titulo_ponencia">
+                </label>
+
+                <label>Categoría de la ponencia <span class="required">*</span>
+                    <select name="categoria_ponencia">
+                        <option value="">Selecciona</option>
+                        <option value="Tecnología">Tecnología</option>
+                        <option value="Derecho">Derecho</option>
+                        <option value="Negocios">Negocios</option>
+                        <option value="Educación">Educación</option>
+                    </select>
+                </label>
+
+                <label>Empresa o institución
+                    <input type="text" name="empresa_ponente">
+                </label>
+
+                <label>Duración estimada (minutos)
+                    <input type="number" name="duracion" min="10" max="180">
+                </label>
+
+                <label>Resumen del tema
+                    <textarea name="resumen" rows="3"></textarea>
+                </label>
+
+                <label>Biografía profesional
+                    <textarea name="biografia" rows="4"></textarea>
+                </label>
+
+                <label>Sube el paper de tu ponencia aquí
+                    <input type="file" name="paper">
+                </label>
+            </fieldset>
+
+            <!-- MENSAJES -->
+            <div class="form-messages">
+                <p class="error-message" style="display:none">⚠️ Por favor completa todos los campos obligatorios.</p>
+                <p class="success-message" style="display:none">✅ Registro enviado correctamente.</p>
+                <p class="ponente-message" style="display:none">📌 Nuestros moderadores revisarán la aplicación de su tema y lo contactaremos.</p>
+            </div>
+
+            <!-- ACCIONES -->
+            <div class="form-actions">
+                <button type="submit" class="btn primary">Registrar</button>
+                <button type="reset" class="btn">Cancelar</button>
+            </div>
+
+        </form>
+    </section>
+
+</main>
+<br>
+<br>
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+    <p>© 2026 Sistema de Eventos MASG · Práctica de Maquetación HTML & CSS</p>
+</footer>
+<br>
+<br>
+<!-- ================= SCRIPT ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.registration-form');
+  const asistenteFields = document.querySelector('.asistente-fields');
+  const ponenteFields = document.querySelector('.ponente-fields');
+  const errorMessage = document.querySelector('.error-message');
+  const successMessage = document.querySelector('.success-message');
+  const ponenteMessage = document.querySelector('.ponente-message');
+
+  document.querySelectorAll('input[name="tipo"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === 'asistente') {
+        asistenteFields.style.display = 'block';
+        ponenteFields.style.display = 'none';
+        ponenteMessage.style.display = 'none';
+      } else {
+        asistenteFields.style.display = 'none';
+        ponenteFields.style.display = 'block';
+      }
+    });
+  });
+
+  function load() {
+    return JSON.parse(localStorage.getItem('participants') || '[]');
+  }
+  function save(data) {
+    localStorage.setItem('participants', JSON.stringify(data));
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    data.registeredAt = new Date().toISOString();
+    data.tipo = document.querySelector('input[name="tipo"]:checked')?.value;
+
+    if (!data.evento || !data.tipo || !data.nombre || !data.email || !data.telefono || (data.tipo === 'ponente' && (!data.titulo_ponencia || !data.categoria_ponencia))) {
+      errorMessage.style.display = 'block';
+      successMessage.style.display = 'none';
+      return;
+    }
+
+    const participants = load();
+    participants.push(data);
+    save(participants);
+
+    errorMessage.style.display = 'none';
+    successMessage.style.display = 'block';
+    if (data.tipo === 'ponente') ponenteMessage.style.display = 'block';
+
+    setTimeout(() => window.location.href = `participantes.html?evento=${data.evento}`, 800);
+  });
+});
+</script>
+
+
+</body>
+</html>
